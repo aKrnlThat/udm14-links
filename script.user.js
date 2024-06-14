@@ -1,3 +1,14 @@
+// ==UserScript==
+// @name         UDM 14 Links
+// @namespace    http://tampermonkey.net/
+// @version      2024-06-14
+// @description  Adds udm=14 parameter to all Google links on any page for an actually good search experience
+// @author       aKrnlThat and contributors
+// @match        http://*/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
 const links = document.querySelectorAll('a');
 
 links.forEach(link => {
@@ -7,3 +18,4 @@ links.forEach(link => {
         }
     }
 });
+})();
