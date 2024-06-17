@@ -1,9 +1,9 @@
 # UDM 14 Links
-Adds `&udm=14` to every Google link on any webpage, for a cleaner look
+Adds `&udm=14` to every Google link on any webpage, for a cleaner look.
 
 ## Instructions
 > [!IMPORTANT]
-> Only tested on Tampermonkey. Violentmonkey may work too, though.
+> Only tested on [Tampermonkey](https://tampermonkey.net). Violentmonkey may work too, though.
 
 1. Click on the latest release
 2. Download the file script.user.js
