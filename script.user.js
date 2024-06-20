@@ -10,10 +10,10 @@
 
 (function () {
   // REPLACING LINKS
-  const links = document.querySelectorAll("a");
+  const googleLinks = document.querySelectorAll("a");
 
-  links.forEach((link) => {
-    if (link.href && link.href.includes("google.com/search")) {
+  googleLinks.forEach((link) => {
+    if (link.href && link.href.includes("google.com/search?q=")) {
       if (!link.href.includes("&udm=14")) {
         link.href += "&udm=14";
       }
@@ -26,7 +26,7 @@
     fetch("https://github.com/aKrnlThat/udm14-links/raw/main/latestVersion.txt")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("udm14-links/Update mechanism: Network response was not ok");
+          throw new Error("udm14-links/Update mechanism: Network response was not ok. Check https://status.github.com/.");
         }
         return response.text();
       })
