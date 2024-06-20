@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         UDM 14 Links
 // @namespace    http://tampermonkey.net/
-// @version      2024-06-16
+// @version      2024-06-19
 // @description  Adds udm=14 parameter to all Google links on any page for a cleaner look
 // @author       aKrnlThat and contributors
 // @match        http://*/*
@@ -22,7 +22,7 @@
 
   // UPDATE MECHANISM
   function checkForUpdates() {
-    const scriptCurrentVersion = "v1.0.2";
+    const scriptCurrentVersion = "v1.1.0";
     fetch("https://github.com/aKrnlThat/udm14-links/raw/main/latestVersion.txt")
       .then((response) => {
         if (!response.ok) {
