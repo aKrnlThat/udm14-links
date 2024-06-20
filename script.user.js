@@ -33,7 +33,7 @@
       .then((scriptLatestVersion) => {
         if (scriptCurrentVersion !== scriptLatestVersion.trim()) {
           console.log(
-            "udm14-links/Update mechanism: A new update is available. Get it at https://github.com/aKrnlThat/udm14-links/releases"
+            "udm14-links/Update mechanism: A new update is available, ", scriptLatestVersion.trim(), ". Get it at https://github.com/aKrnlThat/udm14-links/releases"
           );
         } else {
           console.log("udm14-links/Update mechanism: Up-to-date version used. Hooray!");
