@@ -26,21 +26,30 @@
     fetch("https://github.com/aKrnlThat/udm14-links/raw/main/latestVersion.txt")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("udm14-links/Update mechanism: Network response was not ok. Check https://status.github.com/.");
+          throw new Error(
+            "udm14-links/Update mechanism: Network response was not ok. Check https://status.github.com/."
+          );
         }
         return response.text();
       })
       .then((scriptLatestVersion) => {
         if (scriptCurrentVersion !== scriptLatestVersion.trim()) {
           console.log(
-            "udm14-links/Update mechanism: A new update is available, ", scriptLatestVersion.trim(), ". Get it at https://github.com/aKrnlThat/udm14-links/releases"
+            "udm14-links/Update mechanism: A new update is available, ",
+            scriptLatestVersion.trim(),
+            ". Get it at https://github.com/aKrnlThat/udm14-links/releases"
           );
         } else {
-          console.log("udm14-links/Update mechanism: Up-to-date version used. Hooray!");
+          console.log(
+            "udm14-links/Update mechanism: Up-to-date version used. Hooray!"
+          );
         }
       })
       .catch((error) => {
-        console.error("udm14-links/Update mechanism: There was a problem with the fetch operation:", error);
+        console.error(
+          "udm14-links/Update mechanism: There was a problem with the fetch operation:",
+          error
+        );
       });
   }
 
